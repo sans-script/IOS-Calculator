@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>IOS Calc</title>
+</head>
+<body class="flex flex-col items-center justify-center w-screen h-screen bg-gray-400">
+    <div class="scale-75 bg-black p-4 rounded-[50px] pt-20">
+        <div class="w-[365px] ml-10 overflow-hidden">
+            <h1 id="display" class=" h-40 pt-30 gap-2 pr-10 bg-black text-white text-right font-[250] text-[70px] flex justify-end items-center">
+                0
+           </h1>
+        </div>
+        <div class="bg-black p-5 ">
+            <div class="grid grid-cols-4 gap-2 text-white text-[32px] font-[450] bg-black border border-none">
+                <button onclick="clearDisplay()" class="w-20 h-20 bg-[#A5A5A5] text-black rounded-full ">AC</button>
+                <button class="w-20 h-20 bg-[#A5A5A5] rounded-full flex justify-center items-center"><img src="+-icon.svg" alt="" srcset=""></button>
+                <button onclick="displayOperator('%')"class="w-20 h-20 bg-[#A5A5A5] text-black rounded-full">%</button>
+                <button id="btn_divide" onclick="displayOperatorDivide('/')" class="w-20 h-20 bg-[#FF9F0D] rounded-full"><i class="fa-solid fa-divide"></i></button> 
+                <button onclick="displayNumber(7)" class="w-20 h-20 bg-[#333333] rounded-full">7</button>
+                <button onclick="displayNumber(8)" class="w-20 h-20 bg-[#333333] rounded-full">8</button>
+                <button onclick="displayNumber(9)" class="w-20 h-20 bg-[#333333] rounded-full">9</button>
+                <button onclick="displayOperatorTimes('*')" class="w-20 h-20 bg-[#FF9F0D] rounded-full text-[25px]"><i class="fa-solid fa-x"></i></button>
+                <button onclick="displayNumber(4)" class="w-20 h-20 bg-[#333333] rounded-full">4</button>
+                <button onclick="displayNumber(5)" class="w-20 h-20 bg-[#333333] rounded-full">5</button>
+                <button onclick="displayNumber(6)" class="w-20 h-20 bg-[#333333] rounded-full">6</button>
+                <button onclick="displayOperator('-')" class="w-20 h-20 bg-[#FF9F0D] rounded-full"><i class="fa-solid fa-minus"></i></button>
+                <button onclick="displayNumber(1)" class="w-20 h-20 bg-[#333333] rounded-full">1</button>
+                <button onclick="displayNumber(2)" class="w-20 h-20 bg-[#333333] rounded-full">2</button>
+                <button onclick="displayNumber(3)" class="w-20 h-20 bg-[#333333] rounded-full">3</button>
+                <button onclick="displayOperator('+')" class="w-20 h-20 bg-[#FF9F0D] rounded-full"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="flex mt-2 gap-[15px] text-white text-[32px] font-[350] pb-10">
+                <button onclick="displayNumber(0)" class="w-[168px] h-20 bg-[#333333] rounded-full text-left  pl-8">0</button>
+                <button onclick="displayOperator('.')"class="w-20 h-20 bg-[#333333] rounded-full">,</button>
+                <button onclick="calculate()" class="w-20 h-20 bg-[#FF9F0D] rounded-full"><i class="fa-solid fa-equals"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/b6310a0cd5.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
